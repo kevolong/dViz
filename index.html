@@ -1,1 +1,43 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" />
+    <link rel="stylesheet" href="public/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://d3plus.org/js/d3plus-text.v0.9.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <title>dViz</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div id="nav-bar">
+        <!-- Navbar Logo -->
+        <div id="logo"><img id="header-img" src="public/assets/dViz_logo.png" alt="dViz" /></div>
+        <!-- Navbar Link -->
+        <ul id="nav-links">
+          <li id="choropleth-link" class="active">Choropleth</li>
+          <li id="scatter-link">Scatterplot</li>
+          <li id="treemaps-link">Treemaps</li>
+          <li id="heatmap-link">Heatmap</li>
+          <li id="chart-link">Bar Chart</li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="header">
+      <h3 id="interact-title">Interactive Data Visualization</h3>
+      <h5 id="hover-title">Hover over data-points for more info</h5>
+    </header>
+
+    <main></main>
+
+    <footer id="by-kevin">by <a href="https://kevinandrewlong.com" target="_blank">kevin long</a></footer>
+
+    <script src="public/scripts/app.js" type="module"></script>
+  </body>
+</html>
