@@ -1,0 +1,561 @@
+html {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  margin-top: 85px;
+  background-color: #0a0a0a;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 50px;
+  background-color: #292c2d;
+  color: white;
+}
+
+nav #nav-bar {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav #logo {
+  margin-left: 2em;
+}
+
+nav #logo img {
+  height: 54px;
+}
+
+nav #nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  margin-right: 2em;
+  -webkit-padding-start: 0px;
+  cursor: pointer;
+}
+
+nav #nav-links li {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  font-weight: 300;
+  color: #dddddd;
+}
+
+nav #nav-links li.active {
+  color: white;
+  font-weight: 400;
+}
+
+nav #nav-links li:hover {
+  color: #4ff407;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #4ad80d;
+}
+
+header #interact-title {
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+header #hover-title {
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 0;
+}
+
+footer {
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #4ad80d;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #4ad80d;
+}
+
+#choropleth-container {
+  width: 1000px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+#choropleth-container #title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#choropleth-container #description {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+#choropleth-container #choropleth {
+  margin: auto;
+  margin-top: 0;
+}
+
+#choropleth-container #choropleth .states {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+}
+
+#choropleth-container #legend {
+  margin: auto;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+#choropleth-container #tooltip {
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.33rem;
+  -webkit-box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+          box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background-color: rgba(94, 102, 119, 0.85);
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#choropleth-container #tooltip p {
+  margin: 0 0 0 0;
+}
+
+#choropleth-container #tooltip .small {
+  font-size: 0.85em;
+}
+
+#scatter-container {
+  max-width: 900px;
+  min-width: 800px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+}
+
+#scatter-container #title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#scatter-container #sub-title {
+  font-weight: 400;
+  line-height: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#scatter-container #more-info {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#scatter-container #more-info a {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#scatter-container svg {
+  margin: auto;
+}
+
+#scatter-container svg .dot {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#scatter-container svg .axis {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+#scatter-container svg #legend {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+#scatter-container svg #dot-legend {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+#scatter-container svg .dot-key {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#scatter-container #tooltip {
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.33rem;
+  -webkit-box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+          box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+  padding: 0 0.75rem 0 0.75rem;
+  background-color: rgba(94, 102, 119, 0.9);
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#scatter-container #tooltip .key {
+  color: #e8e8e8;
+}
+
+#scatter-container #tooltip .country-key {
+  color: #eaedff;
+}
+
+#treemap-container #menu {
+  width: 350px;
+  border-radius: 10px;
+  padding: 0.25rem;
+  margin: auto;
+  background-color: #bbc3ce;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+}
+
+#treemap-container #menu h4 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+#treemap-container #menu #button-row {
+  margin-bottom: 0.2rem;
+}
+
+#treemap-container #menu #button-row button {
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #c9d0db;
+}
+
+#treemap-container #menu #button-row button:active {
+  background-color: #e6eaef;
+}
+
+#treemap-container #map-container {
+  width: 1150px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+}
+
+#treemap-container #map-container #title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#treemap-container #map-container #description {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+#treemap-container #map-container #treemap {
+  margin: auto;
+  margin-top: 0;
+}
+
+#treemap-container #map-container #treemap .tile {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#treemap-container #map-container #legend {
+  margin: auto;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+#treemap-container #map-container #legend .legend-item {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#treemap-container #tooltip {
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.33rem;
+  -webkit-box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+          box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background-color: rgba(94, 102, 119, 0.85);
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#treemap-container #tooltip p {
+  margin: 0 0 0 0;
+}
+
+#treemap-container #tooltip .key {
+  color: #e8e8e8;
+}
+
+#treemap-container #tooltip .small {
+  font-size: 0.85em;
+}
+
+#heatmap-container {
+  width: 1200px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+}
+
+#heatmap-container #title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#heatmap-container #description {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#heatmap-container #description .sub-description {
+  font-size: 1.1rem;
+}
+
+#heatmap-container svg {
+  margin: auto;
+}
+
+#heatmap-container svg .axis {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+#heatmap-container svg #y-axis path {
+  stroke-width: 0;
+}
+
+#heatmap-container svg #legend {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+#heatmap-container #tooltip {
+  position: fixed;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.33rem;
+  -webkit-box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+          box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background-color: rgba(94, 102, 119, 0.85);
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#heatmap-container #tooltip p {
+  margin: 0 0 0 0;
+}
+
+#heatmap-container #tooltip .small {
+  font-size: 0.85em;
+}
+
+#chart-container {
+  width: 900px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+}
+
+#chart-container #title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#chart-container #sub-title {
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: -2rem;
+}
+
+#chart-container #more-info {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#chart-container #more-info a {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#chart-container svg {
+  margin: auto;
+}
+
+#chart-container svg .bar {
+  fill: #0050ff;
+}
+
+#chart-container svg .bar:hover {
+  fill: #bdd1fc;
+}
+
+#chart-container svg .axis,
+#chart-container svg #y-axis-key {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+#chart-container #tooltip {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8.75rem;
+  height: 3.5rem;
+  border-radius: 0.33rem;
+  -webkit-box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+          box-shadow: 0 0 1px 1px rgba(63, 63, 63, 0.75);
+  background-color: rgba(94, 102, 119, 0.85);
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+/*# sourceMappingURL=main.css.map */
