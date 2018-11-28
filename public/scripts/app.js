@@ -824,8 +824,6 @@ function loadTree() {
 
 //Set dataset for Treemap and render d3
 function setTree(dataset, dataName) {
-  console.log(dataset);
-
   let title, description;
   switch (dataName) {
     case "games":
