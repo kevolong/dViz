@@ -60,7 +60,7 @@ function changeActiveLink(newActive) {
 
 //Load Choropleth and render d3
 function loadChoropleth() {
-  $("main").load("./public/html/choropleth.html #choropleth-container", function() {
+  $("main").load("public/html/choropleth.html #choropleth-container", function() {
     // Copy json data and simplify for geo data
     const eduData = [...educationDataset];
     const geoData = Object.assign({}, geometryDataset);
