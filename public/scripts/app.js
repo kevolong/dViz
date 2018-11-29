@@ -60,10 +60,17 @@ function changeActiveLink(newActive) {
 
 //Load Choropleth and render d3
 function loadChoropleth() {
+<<<<<<< HEAD
   $("main").html(choroplethHTML);
   // Copy json data and simplify for geo data
   const eduData = [...educationDataset];
   const geoData = Object.assign({}, geometryDataset);
+=======
+  $("main").load("https://github.com/kevolong/dViz/blob/master/public/html/choropleth.html #choropleth-container", function() {
+    // Copy json data and simplify for geo data
+    const eduData = [...educationDataset];
+    const geoData = Object.assign({}, geometryDataset);
+>>>>>>> a9c38b76d8b7f529cc0a30bd637c0163546a0cbf
 
   const path = d3.geoPath();
 
