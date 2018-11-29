@@ -1,3 +1,6 @@
+const heatHTML = `<div id="heatmap-container" class="animated fadeIn slow"><h1 id="title">Global Land Surface Temperature</h1></div>
+`;
+
 const heatDataset = {
   baseTemperature: 8.66,
   monthlyVariance: [
@@ -15784,4 +15787,4 @@ const rectColors = [[3.0, "#030ba3"], // dark blue
                     [14.0, "#ff0000"], // mid red
                     [15.0, "#cc0000"]]; // dark red
 
-export { heatDataset, rectColors };
+export { heatDataset, rectColors, heatHTML };

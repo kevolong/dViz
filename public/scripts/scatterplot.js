@@ -1,3 +1,9 @@
+const scatterHTML = `<div id="scatter-container" class="animated fadeIn slow">
+<h1 id="title">Doping in Professional Cycling</h1>
+<h3 id="sub-title">Alpe d'Huez - Fastest Times</h3>
+</div>
+`;
+
 const dopingDataset = [
   {
     Time: "36:50",
@@ -351,4 +357,4 @@ const dopingDataset = [
   }
 ];
 
-export { dopingDataset };
+export { dopingDataset, scatterHTML };

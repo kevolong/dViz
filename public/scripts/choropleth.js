@@ -1,3 +1,10 @@
+const choroplethHTML = `<div id="choropleth-container" class="animated fadeIn slow">
+<h1 id="title">US Educational Attainment by County</h1>
+<h3 id="description">Percentage of adults age 25+ with a bachelor's degree or higher<br />(2010-2014)</h3>
+
+<svg id="legend"></svg> <svg id="choropleth"></svg>
+</div>`;
+
 //Choropleth Education Data
 const educationDataset = [
 	{
@@ -236668,4 +236675,4 @@ const geometryDataset = {
 	}
 };
 
-export { educationDataset, geometryDataset };
+export { educationDataset, geometryDataset, choroplethHTML };

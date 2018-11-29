@@ -1,3 +1,21 @@
+const treeHTML = `<div id="treemap-container" class="animated fadeIn slow">
+<div id="menu">
+  <h4>Dataset</h4>
+  <div id="button-row">
+    <button class="treemap-button" value="games">Video Games</button> <button class="treemap-button" value="movies">Films</button>
+    <button class="treemap-button" value="pledges">Kickstarter</button>
+  </div>
+</div>
+
+<div id="map-container">
+  <h1 id="title"></h1>
+  <h3 id="description"></h3>
+
+  <svg id="treemap"></svg> <svg id="legend"></svg>
+</div>
+</div>
+`;
+
 //Video Games Data
 const gamesDataset = {
   name: "Video Game Sales Data Top 100",
@@ -1714,4 +1732,4 @@ const kickstarterDataset = {
   ]
 };
 
-export { gamesDataset, moviesDataset, kickstarterDataset };
+export { gamesDataset, moviesDataset, kickstarterDataset, treeHTML };

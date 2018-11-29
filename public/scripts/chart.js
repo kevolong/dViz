@@ -1,3 +1,5 @@
+const chartHTML = `<div id="chart-container" class="animated fadeIn slow"><h1 id="title">United States GDP</h1></div>`;
+
 const gdpDataset = {
   errors: {},
   id: 120140,
@@ -296,4 +298,4 @@ const gdpDataset = {
   ]
 };
 
-export { gdpDataset };
+export { gdpDataset, chartHTML };
